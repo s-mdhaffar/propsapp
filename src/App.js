@@ -1,23 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import Profile from './profile/Profile';
 
 function App() {
+  const user = {
+    fullName : "Elon Musk",
+    bio : "Tesla Space X ...",
+    profession : "Entrepreneur"
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Profile prof = {user}>
+        <h1>This is :</h1>
+        <img src="/elonMusk.jpg" alt="myimage" />
+      </Profile>
     </div>
   );
 }
